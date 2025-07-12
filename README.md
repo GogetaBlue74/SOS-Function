@@ -1,12 +1,12 @@
 # SOS-Function
 A recursive fast growing function called Step Order Shuffle 
-Step Order Shuffle Function: SOS(n, N)
+# Step Order Shuffle Function: SOS(n, N)
 
-Overview
+## Overview
 
 SOS(n, N) (Step Order Shuffle) is a recursive, probabilistic function that grows at an extreme rate. It is simple to define but creates explosive complexity and depth. For small values of n and N, the function may exceed known fast-growing functions like the Ackermann function, TREE(3), and even the Busy Beaver function.
 
-Setup
+## Setup
 
 You begin with N decks of cards.
 
@@ -14,7 +14,7 @@ Each deck contains N unique cards in a fixed initial order.
 
 At each step, every deck is shuffled randomly and independently.
 
-SOS(0, N)
+## SOS(0, N)
 
 Shuffle all N decks simultaneously.
 
@@ -24,7 +24,7 @@ Define this initial sequence of shuffles (from the start until the first match) 
 
 SOS(0, N) is the expected number of steps until this first match occurs.
 
-SOS(1, N)
+## SOS(1, N)
 
 Continue shuffling all decks.
 
@@ -40,7 +40,7 @@ Record the order in which these N! match permutations occurred — this is calle
 
 SOS(1, N) is the expected number of steps required to reach this point, starting from the beginning.
 
-SOS(2, N)
+## SOS(2, N)
 
 Continue shuffling.
 
@@ -58,7 +58,7 @@ Record the order in which those were seen — call this pp1.
 
 SOS(2, N) is the expected number of steps to complete this process.
 
-SOS(n, N) — General Case
+## SOS(n, N) — General Case
 
 Let Hn−1 be the full shuffle history up to the end of SOS(n−1, N).
 
@@ -70,7 +70,7 @@ Continue until all possible permutations of these sequences have occurred.
 
 SOS(n, N) is the expected number of steps to reach this point.
 
-Cumulative History Rule (Critical)
+## Cumulative History Rule (Critical)
 
 At every level n, the history Hn includes:
 
@@ -80,11 +80,11 @@ All previous history reappearances, match sequences, and permutation tracking ph
 
 This means each level n becomes exponentially harder — and the entire prior chaos must reappear exactly before proceeding.
 
-Growth Behavior
+## Growth Behavior
 
 Even SOS(2, 2) grows beyond astronomical size.
 
-The growth of SOS(n, N) vastly outpaces:
+The growth of SOS(n, N) may outpace:
 
 Ackermann(n)
 
@@ -96,7 +96,7 @@ Busy Beaver BB(n)
 
 It may become non-computable or non-total for large n, due to recursive history explosion.
 
-Why It’s Interesting
+## Why It’s Interesting
 
 Defined with simple rules.
 
@@ -106,11 +106,11 @@ Captures the recursive explosion of both history and permutation.
 
 Could open new avenues for studying complexity, probability, and recursion.
 
-Author
+## Author
 
 Created by Jacob Hatton. For questions, contributions, or explorations, feel free to open an issue or submit a pull request.
 
-License
+## License
 
 This project is licensed under the MIT License — you are free to use, modify, and distribute it with proper attribution.
 
